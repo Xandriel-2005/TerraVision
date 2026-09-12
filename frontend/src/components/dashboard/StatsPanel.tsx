@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Users, Car, AlertTriangle, ShieldAlert } from 'lucide-react';
 
 export default function StatsPanel() {

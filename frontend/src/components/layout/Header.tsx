@@ -1,4 +1,3 @@
-import React from 'react';
 import { Clock, Wifi, Server, Search } from 'lucide-react';
 
 export default function Header() {

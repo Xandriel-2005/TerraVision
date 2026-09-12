@@ -31,8 +31,8 @@ npm install
 npm run dev
 ```
 
-### 2. Start AI Pipeline (Requires NVIDIA GPU)
-The AI pipeline requires `torch` with CUDA support.
+### 2. Start AI Pipeline (CPU or NVIDIA GPU)
+The AI pipeline uses PyTorch. It can run on the CPU (using `yolov8n.pt` for speed) or on an NVIDIA GPU (using `yolov8m.pt` for accuracy).
 
 ```bash
 cd ai_pipeline
@@ -40,8 +40,7 @@ cd ai_pipeline
 python -m venv venv
 venv\Scripts\activate  # Windows
 
-# Install dependencies (ensure PyTorch matches your CUDA version)
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+# Install dependencies
 pip install -r requirements.txt
 
 # Create demo videos folder and add some mp4 files

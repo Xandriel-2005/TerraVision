@@ -1,4 +1,3 @@
-import React from 'react';
 import { Shield, Activity, Map, Video, Bell } from 'lucide-react';
 
 interface SidebarProps {

@@ -1,4 +1,3 @@
-import React from 'react';
 import StatsPanel from '../components/dashboard/StatsPanel';
 import LiveFeedGrid from '../components/dashboard/LiveFeedGrid';
 import AlertTicker from '../components/dashboard/AlertTicker';

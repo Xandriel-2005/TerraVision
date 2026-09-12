@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { AlertCircle, AlertTriangle, Info } from 'lucide-react';
 import { useWebSocket } from '../../hooks/useWebSocket';
 
@@ -7,7 +7,7 @@ interface Alert {
   message: string;
   severity: 'high' | 'medium' | 'low';
   camera_id: string;
-  timestamp: float;
+  timestamp: number;
 }
 
 export default function AlertTicker() {

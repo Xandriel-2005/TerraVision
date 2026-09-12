@@ -1,4 +1,3 @@
-import React from 'react';
 import CameraFeed from './CameraFeed';
 
 export default function LiveFeedGrid() {

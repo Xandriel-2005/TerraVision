@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import Layout from './components/layout/Layout';
 import DashboardPage from './pages/DashboardPage';
-// We'll add other pages as we build them: AlertsPage, ZonesPage, MapPage
+import ZonesPage from './pages/ZonesPage';
+import AlertsPage from './pages/AlertsPage';
+import MapPage from './pages/MapPage';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('dashboard');
@@ -11,11 +13,11 @@ function App() {
       case 'dashboard':
         return <DashboardPage />;
       case 'alerts':
-        return <div className="p-8 text-center text-text-muted">Alerts History (Coming Soon)</div>;
+        return <AlertsPage />;
       case 'zones':
-        return <div className="p-8 text-center text-text-muted">Virtual Fences (Coming Soon)</div>;
+        return <ZonesPage />;
       case 'map':
-        return <div className="p-8 text-center text-text-muted">GIS Map (Coming Soon)</div>;
+        return <MapPage />;
       default:
         return <DashboardPage />;
     }

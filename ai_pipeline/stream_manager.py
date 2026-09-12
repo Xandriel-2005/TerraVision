@@ -208,7 +208,7 @@ class StreamManager:
         print(f"[StreamManager] Connecting to backend: {ws_url}")
 
         try:
-            async with websockets.connect(ws_url) as ws:
+            async with websockets.connect(ws_url, ping_interval=None) as ws:
                 self._ws = ws
                 print("[StreamManager] Connected to backend WebSocket")
 

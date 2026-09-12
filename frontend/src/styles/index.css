@@ -118,3 +118,22 @@ body {
 .text-cyan { color: var(--accent-cyan); }
 .text-red { color: var(--alert-red); }
 .text-amber { color: var(--alert-amber); }
+
+/* Pulse animation for alert indicators */
+@keyframes pulse {
+  0% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.15); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* MapLibre GL overrides for dark theme */
+.maplibregl-popup-content {
+  background: var(--bg-panel-solid) !important;
+  color: var(--text-main) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 6px !important;
+  box-shadow: var(--border-glow) !important;
+}
+.maplibregl-popup-tip {
+  border-top-color: var(--bg-panel-solid) !important;
+}

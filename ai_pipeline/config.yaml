@@ -22,21 +22,21 @@ cameras:
 
   - id: "cam-bop-04"
     name: "BOP Bravo - Fence Line"
-    source: "./demo_videos/demo4.mp4"
+    source: "./demo_videos/demo1.mp4"
     loop: true
     enabled: true
 
 # Backend WebSocket URL
 backend_ws: "ws://localhost:8000/ws/pipeline"
 
-# YOLOv8 model — use yolov8s.pt for lower-end GPUs, yolov8m.pt for better accuracy
-model: "yolov8m.pt"
+# YOLOv8 model — using nano (yolov8n) for CPU performance
+model: "yolov8n.pt"
 
 # Detection confidence threshold (0.0 - 1.0)
 confidence: 0.4
 
-# Inference device — "cuda:0" for GPU, "cpu" for CPU
-device: "cuda:0"
+# Inference device — using CPU since no CUDA GPU detected
+device: "cpu"
 
-# Target frames per second (throttles if GPU is faster)
-target_fps: 20
+# Target frames per second (lower for CPU)
+target_fps: 8

@@ -1,0 +1,42 @@
+# TerraVision IBVAP — AI Pipeline Configuration
+# Each camera maps to a video file (or RTSP URL for live feeds)
+
+cameras:
+  - id: "cam-bop-01"
+    name: "BOP Alpha - Main Gate"
+    source: "./demo_videos/demo1.mp4"
+    loop: true
+    enabled: true
+
+  - id: "cam-bop-02"
+    name: "BOP Alpha - Perimeter North"
+    source: "./demo_videos/demo2.mp4"
+    loop: true
+    enabled: true
+
+  - id: "cam-bop-03"
+    name: "BOP Bravo - Checkpoint"
+    source: "./demo_videos/demo3.mp4"
+    loop: true
+    enabled: true
+
+  - id: "cam-bop-04"
+    name: "BOP Bravo - Fence Line"
+    source: "./demo_videos/demo4.mp4"
+    loop: true
+    enabled: true
+
+# Backend WebSocket URL
+backend_ws: "ws://localhost:8000/ws/pipeline"
+
+# YOLOv8 model — use yolov8s.pt for lower-end GPUs, yolov8m.pt for better accuracy
+model: "yolov8m.pt"
+
+# Detection confidence threshold (0.0 - 1.0)
+confidence: 0.4
+
+# Inference device — "cuda:0" for GPU, "cpu" for CPU
+device: "cuda:0"
+
+# Target frames per second (throttles if GPU is faster)
+target_fps: 20
